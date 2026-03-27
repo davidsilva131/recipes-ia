@@ -21,7 +21,6 @@ export const aiRecipeSchema = z.object({
   tips: z
     .array(z.string())
     .describe('Entre 2 y 3 consejos o trucos prácticos para mejorar el resultado'),
-  calories: z.number().optional().describe('Calorías aproximadas por porción (número entero)'),
 })
 
 export type AiRecipe = z.infer<typeof aiRecipeSchema>
